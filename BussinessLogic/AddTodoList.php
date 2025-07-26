@@ -3,11 +3,12 @@
 /**
  * Menambahkan Todo ke List
  */
+require_once '../Model/TodoList.php';
 
 function addTodoList (string $todo) {
     global $todoList;
 
-    $number = sizeof($todoList) + 1;
+    $number = count($todoList) + 1;
 
     $todoList[$number] = $todo;
 }
