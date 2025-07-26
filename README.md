@@ -1,2 +1,5 @@
 # TodoList
-here is my first practice make simple app (TodoList App) with PHP language
+
+This is my first practice 😁 — a simple TodoList app written in PHP.
+
+Note: It runs only in the command line (CLI).
