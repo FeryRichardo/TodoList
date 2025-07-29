@@ -6,9 +6,9 @@ require_once __DIR__ . '/../BussinessLogic/RemoveTodoList.php';
 function viewRemoveTodoList () {
     echo "=== Hapus Todo List ===\n";
 
-    $pilihan = input("Pilih Todo List yang ingin dihapus (Tekan 3 untuk batal) ");
+    $pilihan = input("Pilih Todo List yang ingin dihapus (Tekan x untuk batal) ");
 
-    if ($pilihan == 3) {
+    if ($pilihan == "x") {
         echo "Batal Menghapus Todo List\n";
     } else {
         $success = removeTodoList($pilihan);
