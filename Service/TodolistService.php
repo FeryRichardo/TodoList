@@ -24,7 +24,7 @@ namespace Service {
             echo "TODOLIST:\n";
             $todoList = $this->todolistRepository->findAll();
             foreach($todoList as $number => $value) {
-                echo "$number. $value\n";
+                echo "$number. " . $value->getTodo() . PHP_EOL;
             }
         }
 
@@ -34,6 +34,12 @@ namespace Service {
             echo "Sukses menambahkan todo: $todo\n";
         }
 
-        function removeTodoList(int $number): void {}
+        function removeTodoList(int $number): void {
+            if ($this->todolistRepository->remove($number)) {
+                echo "Sukses menghapus todo nomor $number\n";
+            } else {
+                echo "Gagal menghapus todo nomor $number\n";
+            }
+        }
     }
 }
