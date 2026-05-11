@@ -39,6 +39,26 @@ function testViewAddTodoList(): void {
     $todoListView->addTodoList();
 
     $todoListService->showTodoList();
+
+    $todoListView->addTodoList();
+    $todoListService->showTodoList();
 }
 
-testViewAddTodoList();
+function testViewRemoveTodolist() : void {
+    $todoListRepository = new TodolistRepositoryImpl();
+    $todoListService = new TodolistServiceImpl($todoListRepository);
+    $todoListView = new TodolistView($todoListService);
+
+    $todoListService->showTodoList();
+
+    $todoListView->removeTOdoList();
+
+    $todoListService->showTodoList();
+
+    $todoListView->removeTOdoList();
+
+    $todoListService->showTodoList();
+
+}
+
+testViewShowTodolist();
