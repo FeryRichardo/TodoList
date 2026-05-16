@@ -28,6 +28,7 @@ namespace View {
                 } else if ($pilihan == "2") {
                     $this->removeTodoList();
                 } else if ($pilihan == "x") {
+                    echo "Terima Kasih, Sampai Jumpa Lagi\n";
                     break;
                 } else {
                     echo "Pilihan tidak dimengerti\n";
